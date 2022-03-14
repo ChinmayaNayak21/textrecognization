@@ -44,10 +44,9 @@ Model consists of <b>three</b> parts:
 
 ### Model Architecture.
 <p>
-<img height="700" src="./media/model.png">
 </p>
 
->This network architecture is inspired by **[this](https://arxiv.org/pdf/1507.05717.pdf)** paper. 
+>This network architecture is inspired by  paper. 
 
 #### Steps used to create the architecture:
 * Input shape for our architecture having an input image of height 32 and width 128.
@@ -64,7 +63,6 @@ A CTC loss function requires four arguments to compute the loss, predicted outpu
 
 ## Output
 <p>
-<img src="./media/crnnoutput.png">
 </p>
 <hr>
 
@@ -72,8 +70,8 @@ A CTC loss function requires four arguments to compute the loss, predicted outpu
 
 If you want to improve the recognition accuracy, follow these:
 * Data augmentation: increase dataset-size by applying further (random) transformations to the input images
-* Remove cursive writing style in the input images (**[DeslantImg](https://github.com/githubharald/DeslantImg)**)
+* Remove cursive writing style in the input images 
 * Increase input size (if input of NN is large enough, complete text-lines can be used)
 * Add more CNN layers
-* Decoder: use token passing or word beam search decoding (**[CTCWordBeamSearch](https://github.com/githubharald/CTCWordBeamSearch)**) to constrain the output to dictionary words
+* Decoder: use token passing or word beam search decoding
 * Text correction: if the recognized word is not contained in a dictionary, search for the most similar one
